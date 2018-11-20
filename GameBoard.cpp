@@ -122,36 +122,28 @@ void GameBoard::keyPressEvent(QKeyEvent* event)
 
     if (event->key() == Qt::Key_Down) {
         movePiece(player, Direction::DOWN);
-        std::cout << "DOWN\n";
     }
     else if (event->key() == Qt::Key_Up) {
         movePiece(player, Direction::UP);
-        std::cout << "UP\n";
     }
     else if (event->key() == Qt::Key_Left) {
         movePiece(player, Direction::LEFT);
-        std::cout << "LEFT\n";
     }
     else if (event->key() == Qt::Key_Right) {
         movePiece(player, Direction::RIGHT);
-        std::cout << "RIGHT\n";
     }
 
     if (event->key() == Qt::Key_S) {
         movePiece(badGuy, Direction::DOWN);
-        std::cout << "S\n";
     }
     else if (event->key() == Qt::Key_W) {
         movePiece(badGuy, Direction::UP);
-        std::cout << "w\n";
     }
     else if (event->key() == Qt::Key_A) {
         movePiece(badGuy, Direction::LEFT);
-        std::cout << "A\n";
     }
     else if (event->key() == Qt::Key_D) {
         movePiece(badGuy, Direction::RIGHT);
-        std::cout << "D\n";
     }
 
     updateGrid();
