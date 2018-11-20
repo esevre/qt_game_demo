@@ -25,8 +25,8 @@ GameBoard::GameBoard(QWidget* parent)
     for (int i = 2; i<numRows*numCols; ++i) {
         gamePieces[i] = new GamePiece(this);
     }
-    for (int row = 0; row<numRows; ++row) {
-        for (int col = 0; col<numCols; ++col) {
+    for (size_t row = 0; row<numRows; ++row) {
+        for (size_t col = 0; col<numCols; ++col) {
             gamePieces[index(row, col)]->row = row;
             gamePieces[index(row, col)]->col = col;
         }
